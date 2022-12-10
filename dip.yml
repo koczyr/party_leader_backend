@@ -40,6 +40,13 @@ interaction:
       RAILS_ENV: test
     command: bundle exec rspec
 
+  test-env:
+    description: Run Test env
+    service: rails
+    environment:
+      RAILS_ENV: test
+    command: bash
+
   rails:
     description: Run Rails commands
     service: rails
