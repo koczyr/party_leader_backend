@@ -23,5 +23,6 @@ module PartyLeaderBackend
     # Middleware like session, flash, cookies can be added back manually.
     # Skip views, helpers and assets when generating a new resource.
     config.api_only = true
+    config.web_console.whitelisted_ips = '172.25.0.1'
   end
 end
