@@ -35,3 +35,8 @@ That runs cmds as follows:
 ###Install Rspec for tests: TYLKO RAZ NA SWIEZEJ INSTALACJI BEZ ZADNYCH NAPISANYCH TESTOW
 
     dip rails generate rspec:install
+    
+Manualnie:
+  - dip bash
+  - bundle exec rake db:create RAILS_ENV=test
+  - bundle exec rake db:migrate RAILS_ENV=test
