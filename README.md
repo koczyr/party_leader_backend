@@ -22,3 +22,16 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+Start: 
+
+dip provision 
+
+That runs cmds as follows:
+  - dip compose down --volumes || true
+  - dip compose up -d postgres
+  - dip bash -c bin/setup
+
+###Install Rspec for tests: TYLKO RAZ NA SWIEZEJ INSTALACJI BEZ ZADNYCH NAPISANYCH TESTOW
+
+    dip rails generate rspec:install
