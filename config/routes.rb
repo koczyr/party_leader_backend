@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
-  resources :bookmarks
+  namespace :api do
+    namespace :v1 do
+      resources :leaders
+    end
+  end
   get 'health/index'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
-  # Defines the root path route ("/")
-  # root "articles#index"
+  # root
 end

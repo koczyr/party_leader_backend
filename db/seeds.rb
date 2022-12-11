@@ -7,5 +7,5 @@
 #   Character.create(name: "Luke", movie: movies.first)
 
 10.times do
-    Bookmark.create({title: Faker::Name.name, url: Faker::ProgrammingLanguage.name})
+    Leader.create({name: Faker::Name.name, style: Faker::ProgrammingLanguage.name, years: Faker::PhoneNumber.phone_number, alive: "no"})
 end
