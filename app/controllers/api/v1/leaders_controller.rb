@@ -5,12 +5,13 @@ class Api::V1::LeadersController < ApplicationController
   # GET /api/v1/leaders.json
   def index
     @leaders = Leader.all
-    # render json: @leaders
+    render json: @leaders
   end
 
   # GET /api/v1/leaders/1
   # GET /api/v1/leaders/1.json
   def show
+    render json: @leader
   end
 
   # POST /api/v1/leaders
