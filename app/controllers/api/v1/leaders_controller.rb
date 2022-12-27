@@ -5,25 +5,18 @@ class Api::V1::LeadersController < ApplicationController
   # GET /api/v1/leaders.json
   def index
     @leaders = Leader.all
-    render json: @leaders
   end
 
   # GET /api/v1/leaders/1
   # GET /api/v1/leaders/1.json
   def show
-    render json: @leader
   end
 
   # POST /api/v1/leaders
   # POST /api/v1/leaders.json
   def create
-    @leader = Leader.new(leader_params)
-
-    if @leader.save
-      render :show, status: :created, location: @leader
-    else
-      render json: @leader.errors, status: :unprocessable_entity
-    end
+    @leader = Leader.create!(leader_params)
+    @leader.save
   end
 
   # PATCH/PUT /api/v1/leaders/1
@@ -50,6 +43,6 @@ class Api::V1::LeadersController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def leader_params
-      params.fetch(:leader, {})
+      params.require(:leader).permit(:name, :style, :years, :alive, :avatar)
     end
 end

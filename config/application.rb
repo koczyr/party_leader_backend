@@ -25,5 +25,7 @@ module PartyLeaderBackend
     config.api_only = true
     config.web_console.whitelisted_ips = '172.25.0.1'
     config.web_console.whitelisted_ips = '172.18.0.1'
+    config.web_console.whitelisted_ips = '172.19.0.1'
+    config.web_console.whitelisted_ips = '172.20.0.1'
   end
 end

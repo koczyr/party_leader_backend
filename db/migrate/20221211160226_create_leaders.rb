@@ -5,7 +5,7 @@ class CreateLeaders < ActiveRecord::Migration[7.0]
       t.string :style
       t.string :years
       t.string :alive
-
+      t.string :image_url
       t.timestamps
     end
   end
